@@ -1,0 +1,52 @@
+1.) select first_name, last_name, department_name from companydata.employee e join companydata.department d where e.department_id = d.department_id and department_name = "IT department";
+
+2.) select first_name, last_name, department_name, salary from companydata.employee e join companydata.department d where e.department_id = d.department_id and salary >= 70000 and department_name = "IT department";
+
+Extra questions: select first_name, last_name from companydata.employee e join companydata.department d where e.department_id = d.department_id and last_name = "Miller" and department_name = "Business department";
+		 select first_name, last_name, location_name from companydata.employee e join companydata.department_location d on e.department_id = d.department_id join companydata.location l on l.location_id = d.location_id and country_code = "USA";
+
+
+3.) select distinct c.first_name, c.last_name from companydata.employee e join companydata.employee c on e.manager_id = c.id  ;
+
+
+4.) select first_name, last_name, department_name from companydata.employee e join companydata.department d on e.department_id = d.department_id join companydata. department_location l on l.department_id = d.department_id join companydata.location c on c.location_id = l.location_id and  country_code = "JP";
+
+
+5.) select department_name, id from companydata.department d join companydata.department_location l where d.department_id = l.department_id;
+
+6.)  update companydata.employee e join companydata.employee c on e.manager_id = c.id  set c.salary = c.salary + 1000;
+2nd Answer: update companydata.employee e join companydata.employee c on e.manager_id = c.id set c.salary = c.salary + 1000; 
+
+
+10.) select first_name, last_name, salary from companydata.employee e join companydata.department d on NOT d.department_name = 'Business department'  ORDER BY e.salary ASC ;
+
+
+5. select the deparment name and id of all departments which are cross multiple locations.
+
+Answer:
+
+
+6. increase the salary of all managers by 1000. you may want to check the definition of "manager" in Question 3.
+
+Answer: update companydata.employee e join companydata.employee c on e.manager_id = c.id set c.salary = c.salary + 1000;
+
+7. decrease the salary of all regular employees (not managers) by 1000. you may want to check the definition of "manager" in Question 3.
+
+Answer:
+
+
+8. select all regular employees (not managers) whose first name is not less than 5 chars. you may want to check the definition of "manager" in Question 3.
+
+Answer: select * from companydata.employee e join companydata.employee c where e.manager_id = c.id and char_length(e.first_name) >= 5;
+
+
+9.Fire(I mean delete) all the employees whose salary is below 60000.
+
+Answer:delete from companydata.employee e where e.salary < 60000;
+
+
+10. list the first name, last name and salary of all the employees who are not in Business department in decreasing order of salaries.
+
+Answer: select first_name, last_name, salary from companydata.employee e join companydata.department d on e.department_id = d.department_id and  NOT d.department_name = 'Business department'  ORDER BY e.salary ASC ;
+
+

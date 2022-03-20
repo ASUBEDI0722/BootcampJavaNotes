@@ -1,0 +1,57 @@
+Given a string, the task is to find the maximum consecutive repeating character in a string.
+Note: We do not need to consider the overall count, but the count of repeating that appears in one place.
+Examples: 
+ 
+
+Input : str = "geeekk"
+Output : e
+
+Input : str = "aaaabbcbbb"
+Output : a
+
+
+geeekk -> 
+
+g -> 1
+e -> 1
+e -> 1 + 1 => 2
+e -> 2+ 1 => 3
+k -> 1
+k-> 1+1 => 2
+
+__________________________
+
+Collection<Character, count> =>
+	-> HashMap
+	-> List
+	-> Set
+	-> Queue
+	-> Stack
+	==> HashMap
+
+__________________
+HashMap mapList g ->  1
+	e ->  1+1+1 =3
+	k -> 1+1 =2
+______________________________
+
+geeekk
+//insert
+ for(int i = 0; i <geek.length();++i) {
+	Character c = geek.charAt(i);
+	int count = mapList.getOrDefault(1, map.get(c)+1);
+	mapList.put(c,count);
+	
+}
+
+//print
+char maxChar = '';
+int maximum = 0;
+for(map : mapList) {
+	int value = map.getValue();  1
+	if(value > max) {
+		maxChar = map.getKey();
+	}
+}
+
+						

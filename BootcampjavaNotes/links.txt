@@ -1,0 +1,21 @@
+oops concept
+https://www.edureka.co/blog/interview-questions/oops-interview-questions/
+
+static 
+https://www.javainterviewpoint.com/top-10-java-interview-questions-on-static-keyword/
+
+constructors
+https://www.javainterviewpoint.com/top-14-core-java-interview-questions-constructors/
+
+this
+http://www.instanceofjava.com/2016/03/this-keyword-in-java-with-example.html
+
+method
+https://www.javainterviewpoint.com/java-interview-questions-main-method/
+
+Inheritance:
+https://www.scientecheasy.com/2021/02/inheritance-interview-questions.html/
+
+Polymorphism:
+
+https://www.scientecheasy.com/2021/02/polymorphism-interview-questions.html/
